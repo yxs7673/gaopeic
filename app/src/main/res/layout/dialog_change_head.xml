@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/dialog_head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更换头像"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:textColor="@color/cl_424242"
+        />
+
+    <TextView
+        android:id="@+id/dialog_choice_photo"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:text="选择图片"
+        android:textColor="@color/cl_424242"
+        android:gravity="center"
+        android:textSize="14sp"
+        />
+    <View
+        style="@style/Linestyle"/>
+
+    <TextView
+        android:id="@+id/head_second_btn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="女"
+        android:textColor="@color/cl_424242"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_gray"
+        />
+    <TextView
+        android:id="@+id/dialog_head_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:text="取消"
+        android:gravity="center"
+        android:textSize="14sp"
+        />
+
+
+</LinearLayout>

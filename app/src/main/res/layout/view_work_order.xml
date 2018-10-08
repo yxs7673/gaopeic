@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/view_none_ll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/work_state_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_org_empty"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:id="@+id/work_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textDefault"
+        android:text="@string/str_order_rest"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_order_rest"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_btn_pink"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_work"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_right"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_order_work"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_btn_gray"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_rest"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_right"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_order_info"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_btn_pink"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="去提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_right"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.kxkg.youehu.gaopeic"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation project(':developlib')
+    implementation 'com.android.support:support-v4:26.1.0'
+    //    网络请求与解析库
+    compile "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.convertergsonVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.adapterrxjavaVersion"
+    compile "com.squareup.okhttp:okhttp-urlconnection:$rootProject.okhttpurlconnectionVersion"
+    compile "com.ogaclejapan:rxbinding:$rootProject.rxbindingVersion"
+    compile "com.github.VictorAlbertos.RxCache:core:$rootProject.RxCachecoreVersion"
+    compile "org.jsoup:jsoup:$rootProject.jsoupVersion"
+    //注解工具
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation project(':lcrapiddeveloplibrary')
+    implementation project(':imagepicker')
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    implementation project(':getui')
+}

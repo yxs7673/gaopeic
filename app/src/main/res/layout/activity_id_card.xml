@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/title_bar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            >
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_light_gray"
+               android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_xingming"
+                    />
+                <EditText
+                    android:id="@+id/name_card_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    style="@style/textDefault"
+                    android:hint="请输入真实姓名"
+                    android:paddingLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_light_gray"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="30dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_xingbie"
+                    />
+                <TextView
+                    android:id="@+id/sex_card_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    style="@style/textDefault"
+                    android:hint="请选择性别"
+                    android:paddingLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_light_gray"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_zhengjianhao" />
+
+                <EditText
+                    android:id="@+id/no_card_et"
+                    style="@style/textDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入身份证号"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_light_gray"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_xingming" />
+
+                <EditText
+                    android:id="@+id/special_card_et"
+                    style="@style/textDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入特长（非必填）"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="证件上传"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/sp_16"
+               android:textColor="@color/cl_424242"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                >
+                
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_photo_gray"
+                    android:layout_marginRight="15dp"
+                 >
+
+                    <TextView
+                        android:id="@+id/card_up_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_paizhao"
+                        android:text="身份证正面"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="5dp"
+                        style="@style/textDefault"
+                        />
+                    <ImageView
+                        android:id="@+id/card_up_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_photo_gray"
+                    android:layout_marginLeft="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/card_down_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_paizhao"
+                        android:text="身份证反面"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="5dp"
+                        style="@style/textDefault"
+                        />
+
+                    <ImageView
+                        android:id="@+id/card_down_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+                
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_photo_gray"
+                    android:layout_marginRight="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/licensed_card_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_paizhao"
+                        android:text="护理资格证"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="5dp"
+                        style="@style/textDefault"
+                        />
+                    <ImageView
+                        android:id="@+id/licensed_card_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_photo_gray"
+                    android:layout_marginLeft="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/health_card_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_paizhao"
+                        android:text="健康证"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="5dp"
+                        style="@style/textDefault"
+                        />
+
+                    <ImageView
+                        android:id="@+id/health_card_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/card_confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_btn_pink"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

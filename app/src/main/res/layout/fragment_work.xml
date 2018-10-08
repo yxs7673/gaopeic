@@ -1,0 +1,269 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.kxkg.youehu.gaopeic.mvp.order.fragment.WorkFragment"
+    android:background="@color/white">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/work_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/ll_work_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <include layout="@layout/view_work_order"/>
+
+      <android.support.v7.widget.CardView
+          android:id="@+id/work_cardview"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardBackgroundColor="@color/txt_gray"
+          app:cardCornerRadius="10dp"
+          app:cardElevation="8dp"
+          app:cardUseCompatPadding="true"
+          app:cardPreventCornerOverlap="false"
+          >
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:background="@color/white"
+
+             >
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical"
+                 >
+                 <TextView
+                     android:id="@+id/tv_order_start"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:layout_marginTop="20dp"
+                     android:text="到岗时间："
+                     style="@style/textDefault"
+                     />
+                 
+                 <TextView
+                     android:id="@+id/tv_order_end"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="结束时间："
+                     style="@style/textDefault"
+                     android:layout_marginLeft="15dp"
+                     android:layout_marginTop="10dp"
+                     />
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:paddingLeft="15dp"
+                     android:paddingRight="15dp"
+                     android:layout_marginBottom="5dp"
+                     >
+
+                     <TextView
+                         android:id="@+id/tv_order_days"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="累计天数："
+
+                         />
+
+                     <Space
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         />
+
+                     <TextView
+                         android:id="@+id/tv_order_price"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textSize="20sp"
+                         android:text="0"
+                         android:textColor="@color/bg_pink"
+                         />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="元/天"
+                            android:textSize="12sp"
+                            />
+
+                 </LinearLayout>
+
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="2dp"
+                     android:background="@drawable/shape_dash_line"
+                     android:layerType="software"
+                     />
+
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                     android:orientation="horizontal"
+                     android:paddingLeft="15dp"
+                     android:paddingRight="15dp"
+                     >
+                     <TextView
+                         android:id="@+id/tv_order_name"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="病人姓名："
+
+                         style="@style/textDefault"
+                         />
+                     <Space
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         />
+
+                     <TextView
+                         android:id="@+id/work_phone_btn"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:drawableLeft="@mipmap/ic_phone"
+                         android:text="联系对方"
+                         android:drawablePadding="5dp"
+                         android:textColor="@color/bg_pink"
+                         />
+
+
+                 </LinearLayout>
+
+                   <TextView
+                       android:id="@+id/tv_order_address"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="15dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginRight="15dp"
+                       android:layout_marginBottom="10dp"
+                       style="@style/textDefault"
+                       android:text="病人地址："
+                       />
+
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     >
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         style="@style/textDefault"
+                         android:text="服务内容："
+                         android:layout_marginLeft="15dp"
+                         />
+                 <com.zhy.view.flowlayout.TagFlowLayout
+                     android:id="@+id/tv_order_tagflow"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     app:max_select="-1"
+                     android:padding="5dp"
+                     android:clickable="false"
+                     />
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:padding="30dp"
+
+                     >
+
+                     <Button
+                         android:id="@+id/btn_order_cancle"
+                         android:layout_width="75dp"
+                         android:layout_height="40dp"
+                         android:background="@drawable/bg_btn_gray"
+                         android:text="取消"
+                         android:gravity="center"
+                         android:textColor="@color/white"
+                         android:layout_marginTop="30dp"
+                         android:visibility="gone"
+                         />
+                     <Button
+                         android:id="@+id/tv_order_accept"
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp"
+                         android:background="@drawable/bg_btn_pink"
+                         android:layout_marginLeft="15dp"
+                         android:text="确认接单"
+                         android:gravity="center"
+                         android:textColor="@color/white"
+                         android:layout_marginTop="30dp"
+                         android:visibility="gone"
+
+                         />
+
+                     <Button
+                         android:id="@+id/tv_order_work"
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp"
+                         android:background="@drawable/bg_btn_pink"
+                         android:layout_marginLeft="15dp"
+                         android:text="确认到岗"
+                         android:gravity="center"
+                         android:textColor="@color/white"
+                         android:layout_marginTop="30dp"
+                            android:visibility="gone"
+                         />
+
+                     <RelativeLayout
+                         android:id="@+id/status_work_ll"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="30dp"
+                         >
+
+                     <TextView
+                         android:id="@+id/status_work_tv"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:paddingLeft="8dp"
+                         android:paddingRight="8dp"
+                         android:paddingTop="8dp"
+                         android:paddingBottom="8dp"
+                         android:text="进行中"
+                         android:background="@drawable/bg_state_pink"
+                         android:gravity="center"
+                         android:textColor="@color/bg_pink"
+                         android:layout_alignParentRight="true"
+                         />
+
+                     </RelativeLayout>
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+         </ScrollView>
+
+      </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

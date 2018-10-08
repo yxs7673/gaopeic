@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">高端陪C</string>
+
+
+    <string name="order">订单</string>
+    <string name="bill">对账</string>
+    <string name="user">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--提示语-->
+    <string name="str_his_none">还没有历史订单，\n请上岗耐心等待！</string>
+    <string name="str_order_rest">只有付出辛勤的劳动，才能收获\n喜悦的果实哦！</string>
+    <string name="str_order_wait">暂时没有任务，请耐心等待！</string>
+    <string name="str_order_verify">您的信息正在审核,\n审核通过后即可接单</string>
+
+    <string name="str_btn_work">我要上岗</string>
+    <string name="str_btn_rest">我要休息</string>
+    <string name="title_activity_cash_get_record">CashGetRecordActivity</string>
+
+</resources>

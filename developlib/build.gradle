@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+
+
+
+
+
+
+    //权限请求库
+    compile "com.lovedise:permissiongen:$rootProject.permissiongenVersion"
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
+
+    //列表刷新和加载更多
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation "cn.bingoogolapple:bga-refreshlayout:$rootProject.bgaRefreshVersion"
+
+    //注解工具
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    compile 'com.android.support:design:26.1.0'
+
+    //卡片式布局
+    compile 'com.android.support:cardview-v7:26.1.0'
+    //工具库
+    compile 'com.blankj:utilcode:1.13.5'
+
+    //流式布局
+    compile 'com.hyman:flowlayout-lib:1.1.2'
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_alert_dialog"
+    android:layout_width="300dp"
+    android:padding="1dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="0"
+        android:id="@+id/head_addroom"
+        android:visibility="gone"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title_alert"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:textColor="@color/txt_gray"
+            android:textSize="14sp"
+            android:text="添加房间"/>
+        <include
+            layout="@layout/grayline"
+            android:id="@+id/line"/>
+        <LinearLayout
+            android:id="@+id/head_addroom_add"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="28dp">
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"/>
+            <TextView
+                android:id="@+id/topcontent_alert"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:textColor="@color/color_black_333333"
+                android:textSize="14sp"
+                android:text="创建房间"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/grayline" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ListView
+        android:layout_weight="1"
+        android:divider="@color/txt_gray"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/listview_alertdialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_weight="0"
+        android:visibility="gone"
+        android:id="@+id/layout_ok"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_pressed_btn_bottom_right_left"
+        android:clickable="true"
+        android:onClick="clicks">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="18sp"
+            android:textColor="@color/txt_gray" />
+        <include layout="@layout/grayline"/>
+    </RelativeLayout>
+
+</LinearLayout>

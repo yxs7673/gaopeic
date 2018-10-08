@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+
+        manifestPlaceholders = [
+                GETUI_APP_ID : "0nM7bPZM8AAQ5YJhVtTTlA",
+                GETUI_APP_KEY : "Rstw7mw0WDAA6gzpdz1ODA",
+                GETUI_APP_SECRET : "HMLyfhaMx58pBDBqfgtc08"
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile files('libs/GetuiSDK2.9.5.0.jar')
+}

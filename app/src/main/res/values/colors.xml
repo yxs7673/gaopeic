@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>  <!--//导航栏颜色-->
+    <color name="colorPrimaryDark">#fb9e94</color>  <!--通知栏颜色-->
+    <color name="colorAccent">#FF4081</color> <!--控件选中颜色-->
+
+
+
+    <color name="bg_gray">#fafafa</color>
+    <color name="bg_pink">#fb9e94</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="bg_black">#000000</color>
+    <color name="bg_blue">#6fb7e7</color>
+    <color name="txt_gray">#dbdbdb</color>
+    <color name="text_757575">#757575</color>
+    <color name="cl_light_gray">#dbdbdb</color>
+    <color name="cl_b3b3b3">#b3b3b3</color>
+    <color name="cl_424242">#424242</color>
+    <color name="cl_646464">#646464</color>
+
+
+</resources>
